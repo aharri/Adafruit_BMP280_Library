@@ -136,6 +136,8 @@ class Adafruit_BMP280
 
     int32_t readRawTemperature(void);
     int32_t readRawPressure(void);
+    bmp280_calib_data getCoefficients(void);
+
   private:
 
     void readCoefficients(void);
