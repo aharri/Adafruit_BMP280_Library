@@ -323,3 +323,25 @@ float Adafruit_BMP280::readAltitude(float seaLevelhPa) {
 
   return altitude;
 }
+
+/**************************************************************************/
+/*!
+    @brief  Read raw temperature data from sensor
+*/
+/**************************************************************************/
+int32_t Adafruit_BMP280::readRawTemperature(void)
+{
+  int32_t adc_T = read24(BMP280_REGISTER_TEMPDATA);
+  return adc_T;
+}
+
+/**************************************************************************/
+/*!
+    @brief  Read raw pressure data from sensor
+*/
+/**************************************************************************/
+int32_t Adafruit_BMP280::readRawPressure(void)
+{
+  int32_t adc_P = read24(BMP280_REGISTER_PRESSUREDATA);
+  return adc_P;
+}
